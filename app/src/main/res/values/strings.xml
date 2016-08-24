@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="title_activity_accouny_group">AccounyGroup</string>
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_account_group_management">AccountGroupManagement</string>
+    <string name="search">Rechercher</string>
+    <string name="title_activity_test_search">TestSearch</string>
+    <string name="action_settings">settings</string>
+    <string name="title_activity_reminder_list">ReminderList</string>
+    <string name="description">Description</string>
+    <string name="amount">Montant</string>
+    <string name="tax_vax">VAT</string>
+    <string name="number_of_payment">Répetitions</string>
+    <string name="question_mark">\?</string>
+    <string name="report_future_transactions">Fréquence</string>
+    <string name="frequency">Fréquence</string>
+    <string name="first_payment_on">Commence le</string>
+    <string name="from_acct">Bénificiaire</string>
+    <string name="category">Catégorie</string>
+    <string name="uncategorized">Non classé</string>
+    <string name="payment_method">Mode de paiement</string>
+    <string name="status">Statut</string>
+    <string name="reminder">Rappel</string>
+    <string name="time">Heure</string>
+    <string name="delete">Supprimer</string>
+    <string name="back">Retour</string>
+    <string name="ok">Ok</string>
+    <string name="payee">Bénificiaire</string>
+
+    <string name="app_name">Budget Management</string>
+    <string name="openDrawer">openDrawer</string>
+    <string name="closeDrawer">closeDrawer</string>
+    <string name="date_rappel">Choisissez une date de rappel</string>
+    <string name="frequencyChoose">Choisissez une fréquence</string>
+
+
+    <string-array name="currency">
+        <item>Tunisian dinar.TND</item>
+        <item>Euro.EUR</item>
+        <item>U.S. Dollar.USD</item>
+    </string-array>
+
+
+    <string-array name="distance">
+        <item>Miles (mi)</item>
+        <item>Kilométrage (km)</item>
+    </string-array>
+
+
+    <string-array name="dateNum">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
+        <item>18</item>
+        <item>19</item>
+        <item>20</item>
+        <item>21</item>
+        <item>22</item>
+        <item>23</item>
+        <item>24</item>
+        <item>25</item>
+        <item>26</item>
+        <item>27</item>
+        <item>28</item>
+        <item>29</item>
+        <item>30</item>
+    </string-array>
+
+
+    <string-array name="checkStatus">
+        <item>Impayé</item>
+        <item>Payé</item>
+        <item>Remboursé</item>
+        <item>Annulé</item>
+    </string-array>
+
+    <string-array name="rappelCarte">
+        <item>Jamais</item>
+        <item>Le jour même</item>
+        <item>1 jour avant</item>
+        <item>2 jours avant</item>
+        <item>3 jours avant</item>
+        <item>4 jours avant</item>
+        <item>5 jours avant</item>
+        <item>6 jours avant</item>
+        <item>7 jours avant</item>
+    </string-array>
+    <string-array name="rappelFreq">
+        <item>Quotidien</item>
+        <item>Hebdomadaire</item>
+        <item>Toutes les 2 semaines</item>
+        <item>Bimensuel</item>
+        <item>Mensuel</item>
+        <item>Bimestriel</item>
+        <item>Trimestriel</item>
+        <item>Semestriel</item>
+        <item>Annuel</item>
+        <item>Une seule fois</item>
+    </string-array>
+
+
+    <string-array name="rappelHeure">
+        <item>0:00</item>
+        <item>1:00</item>
+        <item>2:00</item>
+        <item>3:00</item>
+        <item>4:00</item>
+        <item>5:00</item>
+        <item>6:00</item>
+        <item>7:00</item>
+        <item>8:00</item>
+        <item>9:00</item>
+        <item>10:00</item>
+        <item>11:00</item>
+        <item>12:00</item>
+        <item>13:00</item>
+        <item>14:00</item>
+        <item>15:00</item>
+        <item>16:00</item>
+        <item>17:00</item>
+        <item>18:00</item>
+        <item>19:00</item>
+        <item>20:00</item>
+        <item>21:00</item>
+        <item>22:00</item>
+        <item>23:00</item>
+    </string-array>
+    <string name="title_activity_transaction">Transaction</string>
+    <string name="impaye">Impayé</string>
+    <string name="paye">Payé</string>
+    <string name="total">Total</string>
+    <string name="title_activity_note_list">NoteList</string>
+    <string name="title_activity_note_new">NoteNew</string>
+    <string name="note_title">Note Titre</string>
+    <string name="note_content">Description</string>
+    <string name="title_activity_settigs_management">SettigsManagementActivity</string>
+    <string name="title_activity_settings_list">SettingsList</string>
+    <string name="title_activity_reinitialiser_mdp">ReinitialiserMDP</string>
+    <string name="cancel">Annuler</string>
+    <string name="choose_password">Saisir votre MDP</string>
+    <string name="confirm_password">Confirmer votre MDP</string>
+    <string name="password_warning_msg">Le mot de passe doit être d\'au moins 4 caractères.</string>
+    <string name="security_question">Question de sécurité</string>
+    <string name="security_answer">Réponse de sécurité</string>
+    <string name="security_question_msg">La question de mot de passe est utilisée lorsque vous oubliez votre mot de passe .</string>
+    <string name="title_activity_categories_list">CategoriesList</string>
+    <string name="title_activity_budget">BudgetActivity</string>
+    <string name="account">Compte</string>
+    <string name="remaining_budget">Budget restant</string>
+    <string name="category_subcategory">Catégorie. Sous-catégorie</string>
+    <string name="spent_budget">Dépensé/Budget</string>
+    <string name="budget_header_cat_pm_tag">Date,Mode de paiement,Balise</string>
+    <string name="total_remaining_budget">Budget total/restant</string>
+    <string name="total_spend_budget">Total des charges/Total budget</string>
+    <string name="title_activity_depense">DepenseActivity</string>
+    <string name="date">Date</string>
+    <string name="ref">Ref/Chèque</string>
+    <string name="tag">Balise</string>
+    <string name="saveas">Save As</string>
+    <string name="title_activity_revenu">RevenuActivity</string>
+    <string name="title_activity_list_string">ListStringActivity</string>
+    <string name="title_activity_add_budget">AddBudget</string>
+
+</resources>

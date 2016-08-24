@@ -1,0 +1,141 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <!-- Theme pour le dialog qui apparait lors du chargement . -->
+    <style name="AppTheme.Dark.Dialog" parent="Theme.AppCompat.Dialog">
+        <item name="colorAccent">@color/white</item>
+        <item name="android:textColorPrimary">@color/iron</item>
+        <item name="android:background">@color/primary</item>
+    </style>
+    <!-- THeme pour les pages Login et SignUp  -->
+    <style name="AppTheme.Dark" parent="Theme.AppCompat.NoActionBar">
+        <item name="colorPrimary">@color/accent2</item>
+        <item name="colorPrimaryDark">@color/accent2</item>
+        <item name="colorAccent">@color/accent2</item>
+
+        <item name="android:windowBackground">@color/accent</item>
+
+        <item name="colorControlNormal">@color/iron</item>
+        <item name="colorControlActivated">@color/white</item>
+        <item name="colorControlHighlight">@color/white</item>
+        <item name="android:textColorHint">@color/iron</item>
+
+        <item name="colorButtonNormal">@color/accent3</item>
+
+    </style>
+
+
+    <style name="MyMaterialTheme" parent="MyMaterialTheme.Base">
+
+    </style>
+
+    <style name="MyMaterialTheme.Base" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+
+    <style name="MyCustomTabLayout" parent="Widget.Design.TabLayout">
+        <item name="tabTextAppearance">@style/MyCustomTabText</item>
+        <item name="tabSelectedTextColor">@color/aluminum</item>
+    </style>
+
+    <style name="MyCustomTabText" parent="TextAppearance.AppCompat.Button">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+
+    <style name="AppThemeTest" parent="AppTheme">
+        <!-- Customize your theme here. -->
+        <!-- Base application thème. -->
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="android:itemBackground">@color/oil</item>
+
+        <item name="android:dropDownListViewStyle">@style/PopupMenuListView</item>
+        <item name="actionMenuTextColor">@color/white</item>
+        <item name="android:itemTextAppearance">@style/TextAppearance</item>
+        <item name="android:textColorPrimary">@drawable/gradient_color</item>
+        <item name="android:homeAsUpIndicator">@style/homeAsUpIndicator</item>
+        <item name="colorPrimary">@drawable/gradient_color</item>
+
+        <item name="windowActionModeOverlay">true
+        </item> <!--pour que l'action mode ,n'apparait pas au dessus de mon toolbar-->
+        <item name="actionModeBackground">@color/accent</item>
+
+
+    </style>
+
+    <style name="TextAppearance">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">15dp</item>
+
+    </style>
+
+    <style name="homeAsUpIndicator">
+        <item name="android:icon">@drawable/retour</item>
+    </style>
+
+
+    <!-- Change Overflow Menu ListView Divider Property (le separateur)-->
+    <style name="PopupMenuListView" parent="@android:style/Widget.Holo.ListView.DropDown">
+        <item name="android:divider">#ffffff</item>
+        <item name="android:dividerHeight">1dp</item>
+    </style>
+
+    <!-- Change Overflow Menu ListView Text Size and Text Size -->
+    <style name="PopupMenuTextView" parent="@style/android:Theme.Holo.Light">
+        <item name="android:textColor">#00FF00</item>
+        <item name="android:textSize">28dp</item>
+    </style>
+
+    <!-- Change Overflow Menu Background (l'arriere plan )-->
+    <style name="PopupMenu" parent="android:Widget.Holo.Light.ListPopupWindow">
+        <item name="android:popupBackground">@color/accent</item>
+    </style>
+
+
+    <!--Dialog style -->
+    <style name="PauseDialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowTitleStyle">@style/PauseDialogTitle</item>
+    </style>
+
+    <style name="PauseDialogTitle" parent="@android:style/TextAppearance.DialogWindowTitle">
+        <item name="android:gravity">center_horizontal</item>
+    </style>
+
+    <style name="DialogWindowTitle">
+        <item name="android:maxLines">1</item>
+        <item name="android:scrollHorizontally">true</item>
+        <item name="android:textAppearance">@android:style/TextAppearance.DialogWindowTitle</item>
+    </style>
+
+    <style name="budgetBarStyle" parent="@android:style/Widget.ProgressBar.Horizontal">
+        <item name="android:maxHeight">20.0dip</item>
+        <item name="android:minHeight">18.0dip</item>
+    </style>
+
+
+</resources>

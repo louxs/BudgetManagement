@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+    android:id="@+id/accountToContact"
+    android:orderInCategory="100"
+    android:icon="@drawable/ic_action_add_to_queue"
+    app:showAsAction="always"
+    android:title=""
+    />
+    <item
+    android:id="@+id/accountToAccount"
+    android:orderInCategory="100"
+    android:icon="@drawable/ic_action_new"
+    app:showAsAction="always"
+    android:title=""
+    />
+</menu>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+
+    <item
+        android:id="@+id/action_search"
+        android:title="@android:string/search_go"
+        android:icon="@drawable/ic_search"
+        app:showAsAction="always|collapseActionView"
+        app:actionViewClass="android.support.v7.widget.SearchView"
+        android:visible="false"/>
+    <item android:icon="@drawable/ic_action_new" android:id="@+id/add" android:title="add" app:showAsAction="always" android:orderInCategory="0"
+        />
+    <item android:icon="@drawable/ic_action_edit" android:id="@+id/edit" android:title="edit" app:showAsAction="always" />
+    <item android:icon="@drawable/ic_action_overflow" android:id="@+id/empty" android:title="" app:showAsAction="always">
+        <menu>
+            <item android:id="@+id/group" android:title="Groupes de comptes" app:showAsAction="never" />
+            <item android:id="@+id/setDefault" android:title="Par défaut" app:showAsAction="never" />
+            <item android:id="@id/hiddenAccount" android:title="Compte caché" app:showAsAction="never" />
+            <item android:id="@+id/transfer" android:title="Virement" app:showAsAction="never" />
+            <item android:id="@+id/currency" android:title="DEvise de base" app:showAsAction="never" />
+            <item android:id="@+id/search" android:title="Rechercher" app:showAsAction="collapseActionView|ifRoom" android:actionViewClass="android.widget.SearchView" />
+        </menu>
+    </item>
+</menu>

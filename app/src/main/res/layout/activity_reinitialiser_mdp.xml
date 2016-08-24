@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="louai.com.budgetmanagement.ReinitialiserMDP">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+
+
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_marginTop="55dp"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1.0"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+        <LinearLayout
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            android:id="@+id/buttons"
+            android:padding="10.0dip"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true">
+            <Button
+                android:id="@id/cancelButton"
+                android:layout_width="150.0dip"
+                android:layout_height="wrap_content"
+                android:layout_margin="2.0dip"
+                android:minWidth="1.0dip"
+                android:minHeight="1.0dip"
+                android:text="@string/cancel"
+                android:textColor="@color/white"
+                android:layout_weight="1.0"
+                android:background="@drawable/home_button_blue"
+                style="?android:attr/buttonStyleSmall" />
+            <Button
+                android:id="@id/okButton"
+                android:layout_width="150.0dip"
+                android:textColor="@color/white"
+
+                android:layout_height="wrap_content"
+                android:layout_margin="2.0dip"
+                android:minWidth="1.0dip"
+                android:minHeight="1.0dip"
+                android:text="@string/ok"
+                android:layout_weight="1.0"
+                android:background="@drawable/home_button_blue"
+
+                style="?android:attr/buttonStyleSmall" />
+        </LinearLayout>
+
+        <ScrollView
+            android:id="@id/scroll"
+            android:visibility="visible"
+            android:scrollbars="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_above="@id/buttons">
+            <LinearLayout
+                android:orientation="vertical"
+                android:id="@+id/pinLayout"
+                android:padding="5.0dip"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="120.0dip"
+                        android:layout_height="wrap_content"
+                        android:text="@string/choose_password" />
+                    <EditText android:textSize="18.0dip"
+                        android:id="@+id/choosePinEditText"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberPassword"
+                        android:digits="\ 0123456789" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="120.0dip"
+                        android:layout_height="wrap_content"
+                        android:text="@string/confirm_password" />
+                    <EditText
+                        android:textSize="18.0dip"
+                        android:id="@+id/confirmPinEditText"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:digits="\ 0123456789"
+                        android:inputType="numberPassword"
+                        />
+                </LinearLayout>
+
+                <TextView
+                    android:textColor="@color/red"
+                    android:paddingBottom="10.0dip"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/password_warning_msg" />
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:id="@+id/securityQuestionLayout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content">
+                    <TextView android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/security_question" />
+                    <EditText android:textSize="18.0dip"
+                        android:id="@+id/securityQuestionEditText"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/security_answer" />
+                    <EditText android:textSize="18.0dip"
+                        android:id="@+id/securityAnswerEditText"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" />
+                    <TextView android:textColor="@color/red"
+                        android:paddingBottom="10.0dip"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/security_question_msg" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </RelativeLayout>
+
+</android.support.design.widget.CoordinatorLayout>

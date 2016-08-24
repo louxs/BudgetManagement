@@ -1,0 +1,677 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <ScrollView android:scrollbars="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+        <LinearLayout android:orientation="vertical"
+            android:id="@+id/ExpenseReport"
+            android:paddingLeft="5.0dip"
+            android:paddingTop="3.0dip"
+            android:paddingRight="5.0dip"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:id="@+id/balanceTopLayout"
+                android:background="@drawable/background_solid_white"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1.0dip">
+                <RelativeLayout
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:id="@+id/accountLayout"
+                    android:background="@android:drawable/list_selector_background"
+                    android:paddingTop="3.0dip"
+                    android:paddingBottom="3.0dip"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:textSize="14.0dip"
+                        android:textStyle="bold"
+                        android:id="@+id/accountLabel"
+                        android:padding="5.0dip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Compte" />
+                    <ImageView
+                        android:id="@+id/editAccount"
+                        android:paddingRight="5.0dip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/aarrow"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true" />
+                    <TextView
+                        android:textSize="14.0dip"
+                        android:textStyle="bold"
+                        android:textColor="@color/primary"
+                        android:id="@+id/accountsGroup"
+                        android:padding="5.0dip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@id/editAccount"
+                        android:layout_toRightOf="@id/accountLabel" />
+                </RelativeLayout>
+                <LinearLayout
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:id="@+id/balanceLayout"
+                    android:background="@android:drawable/list_selector_background"
+                    android:focusable="true"
+                    android:clickable="true"
+                    android:layout_width="fill_parent"
+                    android:layout_height="28.0dip">
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0">
+                        <TextView
+                            android:textSize="14.0dip"
+                            android:textStyle="normal"
+                            android:gravity="left"
+                            android:paddingLeft="15.0dip"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Solde aujourd'hui"
+                            android:singleLine="true" />
+                    </LinearLayout>
+                    <RelativeLayout
+                        android:orientation="horizontal"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0">
+                        <TextView
+                            android:textSize="14.0dip"
+                            android:textStyle="bold"
+                            android:gravity="right"
+                            android:id="@+id/balance"
+                            android:paddingLeft="5.0dip"
+                            android:paddingRight="15.0dip"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content" />
+                    </RelativeLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:id="@+id/monthEndBalanceLayout"
+                    android:background="@android:drawable/list_selector_background"
+                    android:focusable="true"
+                    android:clickable="true"
+                    android:layout_width="fill_parent"
+                    android:layout_height="28.0dip">
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0">
+                        <TextView
+                            android:textSize="14.0dip"
+                            android:textStyle="normal"
+                            android:gravity="left"
+                            android:paddingLeft="15.0dip"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Solde prévisionnel fin de mois"
+                            android:singleLine="true" />
+                    </LinearLayout>
+                    <RelativeLayout
+                        android:orientation="horizontal"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0">
+                        <TextView
+                            android:textSize="14.0dip"
+                            android:textStyle="bold"
+                            android:gravity="right"
+                            android:id="@+id/monthEndBalance"
+                            android:paddingLeft="5.0dip"
+                            android:paddingRight="15.0dip"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content" />
+                    </RelativeLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:id="@+id/todayBalanceLayout"
+                    android:background="@android:drawable/list_selector_background"
+                    android:focusable="true"
+                    android:clickable="true"
+                    android:layout_width="fill_parent"
+                    android:layout_height="28.0dip">
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0">
+                        <TextView
+                            android:textSize="14.0dip"
+                            android:textStyle="normal"
+                            android:gravity="left"
+                            android:paddingLeft="15.0dip"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Solde du jour:"
+                            android:singleLine="true" />
+                    </LinearLayout>
+                    <RelativeLayout
+                        android:orientation="horizontal"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0">
+                        <TextView
+                            android:textSize="14.0dip"
+                            android:textStyle="bold"
+                            android:gravity="right"
+                            android:id="@+id/todayBalance"
+                            android:paddingLeft="5.0dip"
+                            android:paddingRight="15.0dip"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content" />
+                    </RelativeLayout>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:id="@+id/thisWeekBalanceLayout"
+                    android:background="@android:drawable/list_selector_background"
+                    android:focusable="true"
+                    android:clickable="true"
+                    android:layout_width="fill_parent"
+                    android:layout_height="28.0dip">
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0">
+                        <TextView
+                            android:textSize="14.0dip"
+                            android:textStyle="normal"
+                            android:gravity="left"
+                            android:paddingLeft="15.0dip"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Solde du semaine :"
+                            android:singleLine="true" />
+                    </LinearLayout>
+                    <RelativeLayout
+                        android:orientation="horizontal"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0">
+                        <TextView
+                            android:textSize="14.0dip"
+                            android:textStyle="bold"
+                            android:gravity="right"
+                            android:id="@+id/thisWeekBalance"
+                            android:paddingLeft="5.0dip"
+                            android:paddingRight="15.0dip"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content" />
+                    </RelativeLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:id="@+id/thisMonthBalanceLayout"
+                    android:background="@android:drawable/list_selector_background"
+                    android:focusable="true"
+                    android:clickable="true"
+                    android:layout_width="fill_parent"
+                    android:layout_height="28.0dip">
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0">
+                        <TextView
+                            android:textSize="14.0dip"
+                            android:textStyle="normal"
+                            android:gravity="left"
+                            android:paddingLeft="15.0dip"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Solde de l'année :"
+                            android:singleLine="true" />
+                    </LinearLayout>
+                    <RelativeLayout
+                        android:orientation="horizontal"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0">
+                        <TextView
+                            android:textSize="14.0dip"
+                            android:textStyle="bold"
+                            android:gravity="right"
+                            android:id="@+id/thisMonthBalance"
+                            android:paddingLeft="5.0dip"
+                            android:paddingRight="15.0dip"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content" />
+                    </RelativeLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:id="@+id/yearToDateBalanceLayout"
+                    android:background="@android:drawable/list_selector_background"
+                    android:focusable="true"
+                    android:clickable="true"
+                    android:layout_width="fill_parent"
+                    android:layout_height="28.0dip">
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0">
+                        <TextView
+                            android:textSize="14.0dip"
+                            android:textStyle="normal"
+                            android:gravity="left"
+                            android:paddingLeft="15.0dip"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Solde de l'année :"
+                            android:singleLine="true" />
+                    </LinearLayout>
+                    <RelativeLayout
+                        android:orientation="horizontal"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0">
+                        <TextView
+                            android:textSize="14.0dip"
+                            android:textStyle="bold"
+                            android:gravity="right"
+                            android:id="@+id/yearToDateBalance"
+                            android:paddingLeft="5.0dip"
+                            android:paddingRight="15.0dip"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:id="@+id/incomeTopLayout"
+                android:background="@drawable/background_solid_white"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3.0dip">
+                <LinearLayout
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:id="@+id/todayIncomeLayout"
+                    android:background="@android:drawable/list_selector_background"
+                    android:focusable="true"
+                    android:clickable="true"
+                    android:layout_width="fill_parent"
+                    android:layout_height="28.0dip">
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0">
+                        <TextView android:textSize="14.0dip"
+                            android:textStyle="normal"
+                            android:gravity="left"
+                            android:paddingLeft="15.0dip"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Revenus d'aujourd'hui :"
+                            android:singleLine="true" />
+                    </LinearLayout>
+                    <RelativeLayout
+                        android:orientation="horizontal"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0">
+                        <TextView
+                            android:textSize="14.0dip"
+                            android:textStyle="bold"
+                            android:textColor="@color/green"
+                            android:gravity="right"
+                            android:id="@+id/todayIncome"
+                            android:paddingLeft="5.0dip"
+                            android:paddingRight="15.0dip"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:id="@+id/thisWeekIncomeLayout"
+                    android:background="@android:drawable/list_selector_background"
+                    android:focusable="true"
+                    android:clickable="true"
+                    android:layout_width="fill_parent"
+                    android:layout_height="28.0dip">
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0">
+                        <TextView
+                            android:textSize="14.0dip"
+                            android:textStyle="normal"
+                            android:gravity="left"
+                            android:paddingLeft="15.0dip"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Revenus cette semaine : "
+                            android:singleLine="true" />
+                    </LinearLayout>
+                    <RelativeLayout
+                        android:orientation="horizontal"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0">
+                        <TextView
+                            android:textSize="14.0dip"
+                            android:textStyle="bold"
+                            android:textColor="@color/green"
+                            android:gravity="right"
+                            android:id="@+id/thisWeekIncome"
+                            android:paddingLeft="5.0dip"
+                            android:paddingRight="15.0dip"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:id="@+id/thisMonthIncomeLayout"
+                    android:background="@android:drawable/list_selector_background"
+                    android:focusable="true"
+                    android:clickable="true"
+                    android:layout_width="fill_parent"
+                    android:layout_height="28.0dip">
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0">
+                        <TextView
+                            android:textSize="14.0dip"
+                            android:textStyle="normal"
+                            android:gravity="left"
+                            android:paddingLeft="15.0dip"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Revenus du mois : "
+                            android:singleLine="true" />
+                    </LinearLayout>
+                    <RelativeLayout
+                        android:orientation="horizontal"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0">
+                        <TextView
+                            android:textSize="14.0dip"
+                            android:textStyle="bold"
+                            android:textColor="@color/green"
+                            android:gravity="right"
+                            android:id="@+id/thisMonthIncome"
+                            android:paddingLeft="5.0dip"
+                            android:paddingRight="15.0dip"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:id="@+id/thisYearIncomeLayout"
+                    android:background="@android:drawable/list_selector_background"
+                    android:focusable="true" android:clickable="true"
+                    android:layout_width="fill_parent"
+                    android:layout_height="28.0dip">
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0">
+                        <TextView
+                            android:textSize="14.0dip"
+                            android:textStyle="normal"
+                            android:gravity="left"
+                            android:paddingLeft="15.0dip"
+
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Revenus de l'année :"
+                            android:singleLine="true" />
+                    </LinearLayout>
+                    <RelativeLayout
+                        android:orientation="horizontal"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0">
+                        <TextView
+                            android:textSize="14.0dip"
+                            android:textStyle="bold"
+                            android:textColor="@color/green"
+                            android:gravity="right"
+                            android:id="@+id/thisYearIncome"
+                            android:paddingLeft="5.0dip"
+                            android:paddingRight="15.0dip"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/DepenseeTopLayout"
+            android:background="@drawable/background_solid_white"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3.0dip">
+
+            <LinearLayout
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:id="@+id/incomeLayout"
+                android:background="@android:drawable/list_selector_background"
+                android:focusable="true"
+                android:clickable="true"
+                android:layout_width="fill_parent"
+                android:layout_height="28.0dip">
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0">
+                    <TextView
+                        android:textSize="14.0dip"
+                        android:textStyle="normal"
+                        android:gravity="left"
+                        android:paddingLeft="15.0dip"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Dépenses ce jour :"
+                        android:singleLine="true" />
+                </LinearLayout>
+                <RelativeLayout
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0">
+                    <TextView
+                        android:textSize="14.0dip"
+                        android:textStyle="bold"
+                        android:textColor="@color/green"
+                        android:gravity="right"
+                        android:id="@+id/income"
+                        android:paddingLeft="5.0dip"
+                        android:paddingRight="15.0dip"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" />
+                </RelativeLayout>
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:id="@+id/incomeLayout1"
+                android:background="@android:drawable/list_selector_background"
+                android:focusable="true"
+                android:clickable="true"
+                android:layout_width="fill_parent"
+                android:layout_height="28.0dip">
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0">
+                    <TextView
+                        android:textSize="14.0dip"
+                        android:textStyle="normal"
+                        android:gravity="left"
+                        android:paddingLeft="15.0dip"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Dépenses semaine :"
+                        android:singleLine="true" />
+                </LinearLayout>
+                <RelativeLayout
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0">
+                    <TextView
+                        android:textSize="14.0dip"
+                        android:textStyle="bold"
+                        android:textColor="@color/green"
+                        android:gravity="right"
+                        android:id="@+id/incomeWeek"
+                        android:paddingLeft="5.0dip"
+                        android:paddingRight="15.0dip"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" />
+                </RelativeLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:id="@+id/incomeLayout2"
+                android:background="@android:drawable/list_selector_background"
+                android:focusable="true"
+                android:clickable="true"
+                android:layout_width="fill_parent"
+                android:layout_height="28.0dip">
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0">
+                    <TextView
+                        android:textSize="14.0dip"
+                        android:textStyle="normal"
+                        android:gravity="left"
+                        android:paddingLeft="15.0dip"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Dépenses  mois :"
+                        android:singleLine="true" />
+                </LinearLayout>
+                <RelativeLayout
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0">
+                    <TextView
+                        android:textSize="14.0dip"
+                        android:textStyle="bold"
+                        android:textColor="@color/green"
+                        android:gravity="right"
+                        android:id="@+id/incomeMonth"
+                        android:paddingLeft="5.0dip"
+                        android:paddingRight="15.0dip"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" />
+                </RelativeLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:id="@+id/incomeLayout3"
+                android:background="@android:drawable/list_selector_background"
+                android:focusable="true"
+                android:clickable="true"
+                android:layout_width="fill_parent"
+                android:layout_height="28.0dip">
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0">
+                    <TextView
+                        android:textSize="14.0dip"
+                        android:textStyle="normal"
+                        android:gravity="left"
+                        android:paddingLeft="15.0dip"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Dépenses année :"
+                        android:singleLine="true" />
+                </LinearLayout>
+                <RelativeLayout
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0">
+                    <TextView
+                        android:textSize="14.0dip"
+                        android:textStyle="bold"
+                        android:textColor="@color/green"
+                        android:gravity="right"
+                        android:id="@+id/incomeYear"
+                        android:paddingLeft="5.0dip"
+                        android:paddingRight="15.0dip"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" />
+                </RelativeLayout>
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+
+
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

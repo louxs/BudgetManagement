@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+
+    <item android:icon="@drawable/ic_action_overflow" android:id="@+id/empty" android:title="" app:showAsAction="always" >
+        <menu>
+            <item android:id="@+id/compte" android:title="Compte" app:showAsAction="never" />
+            <item android:id="@+id/rappel" android:title="Rappel" app:showAsAction="never" />
+            <item android:id="@+id/note" android:title="Note" app:showAsAction="never" />
+            <item android:id="@+id/outils" android:title="Outils" app:showAsAction="never" />
+            <item android:id="@+id/plusDeFonc" android:title="Plus de fonctionalités" app:showAsAction="never" />
+            <item android:id="@+id/parametres" android:title="Paramètres" app:showAsAction="never" android:actionViewClass="android.widget.SearchView" />
+            <item android:id="@+id/aPropos" android:title="Apropos" app:showAsAction="never" android:actionViewClass="android.widget.SearchView" />
+        </menu>
+    </item>
+</menu>

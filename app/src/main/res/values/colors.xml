@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="accent">#ff009688</color>
+    <color name="accent2">#05b4a4</color>
+    <color name="accent3">#095850</color>
+
+    <color name="primary">#E43F3F</color>
+    <color name="colorItemList">#fdfae2</color>
+    <color name="primary_dark">#E12929</color>
+    <color name="primary_darker">#CC1D1D</color>
+    <color name="black">#000000</color>
+    <color name="jet">#222222</color>
+    <color name="oil">#333333</color>
+    <color name="monsoon">#777777</color>
+    <color name="jumbo">#888888</color>
+    <color name="aluminum">#372b2b</color>
+    <color name="base">#AAAAAA</color>
+    <color name="iron">#CCCCCC</color>
+    <color name="white">#FFFFFF</color>
+    <color name="colorPrimary">#125688</color>
+    <color name="colorPrimaryDark">#125688</color>
+    <color name="textColorPrimary">#FFFFFF</color>
+    <color name="windowBackground">#FFFFFF</color>
+    <color name="navigationBarColor">#000000</color>
+    <color name="colorAccent">#c8e8ff</color>
+    <color name="green">#ff8fcc85</color>
+    <color name="greenEnd">#ff1da130</color>
+    <color name="greenMid">#ff0a8815</color>
+    <color name="greenStart">#ff33dd44</color>
+    <color name="green_dark">#ff50d050</color>
+    <color name="green_light">#ff088a08</color>
+    <color name="red">#ff0008</color>
+    <color name="red_dark">#ffff0000</color>
+
+    <color name="pink">#f578ec</color>
+    <color name="purple">#a50ac7</color>
+
+    <color name="rougeBordeau">#700508</color>
+    <color name="blue">#1200d7</color>
+    <color name="yellow">#ffec5e</color>
+    <color name="amber">#7c7172</color>
+    <color name="orange">#fd9c0a</color>
+
+    <color name="blueC">#ff33b5e5</color>
+    <color name="button_text">#ffffffff</color>
+    <color name="caldroid_black">#ff000000</color>
+    <color name="caldroid_darker_gray">#ffaaaaaa</color>
+    <color name="caldroid_gray">#ffcccccc</color>
+    <color name="caldroid_holo_blue_dark">#ff0099cc</color>
+    <color name="caldroid_holo_blue_light">#ff33b5e5</color>
+    <color name="caldroid_lighter_gray">#ffdddddd</color>
+    <color name="caldroid_sky_blue">#ffa3e8f7</color>
+    <color name="caldroid_transparent">#00000000</color>
+    <color name="caldroid_white">#ffffffff</color>
+    <color name="default_circle_indicator_fill_color">#ffffffff</color>
+    <color name="default_circle_indicator_page_color">#00000000</color>
+    <color name="default_circle_indicator_stroke_color">#ffdddddd</color>
+    <color name="default_line_indicator_selected_color">#ff33b5e5</color>
+    <color name="default_line_indicator_unselected_color">#ffbbbbbb</color>
+    <color name="default_title_indicator_footer_color">#ff33b5e5</color>
+    <color name="default_title_indicator_selected_color">#ffffffff</color>
+    <color name="default_title_indicator_text_color">#bbffffff</color>
+    <color name="default_underline_indicator_selected_color">#ff33b5e5</color>
+    <color name="gold">#f4e400</color>
+
+    <color name="red_light">#ffff0000</color>
+    <color name="beige">#ffff0000</color>
+
+
+</resources>

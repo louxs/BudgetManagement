@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:weightSum="1"
+    android:background="#f6f6df"
+    android:id="@+id/monLinearLayout">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:layout_gravity="center"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="12dp"
+
+            android:layout_width="8dp"
+            android:layout_height="match_parent"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:id="@+id/textViewAcc"
+            android:background="#f04a4a" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="28dp" android:background="@null">
+
+                <TextView
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="Personal Expense - Default"
+                    android:id="@+id/nomCompte"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentStart="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="#3e9333"
+
+                    android:text="5.000.00"
+                    android:id="@+id/valeurTotale"
+                    android:layout_alignTop="@+id/nomCompte"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="6dp"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="28dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="Personal Expense - Account"
+                    android:id="@+id/accountsGroup"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentStart="true"
+                    android:textSize="12dp"
+                    android:textColor="@color/aluminum" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="470.0"
+                    android:id="@+id/expAcc"
+                    android:layout_alignBaseline="@+id/accountsGroup"
+                    android:layout_alignBottom="@+id/accountsGroup"
+                    android:layout_alignParentEnd="true" android:layout_marginEnd="6dp"
+                    android:textColor="#f90606" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="28dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="Solde du compte : "
+                    android:id="@+id/soldeCourantDuCompte"
+                    android:textStyle="normal"
+                    android:textColor="#010101"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentStart="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="8.000.00"
+                    android:id="@+id/valeurSoldeCourant"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true" android:layout_marginEnd="6dp"
+                    android:textColor="#58ac4d" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="Small Text"
+                    android:id="@+id/devise"
+                    android:textStyle="normal"
+                    android:textColor="#010101"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/soldeCourantDuCompte" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

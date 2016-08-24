@@ -1,0 +1,32 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="vertical"
+    android:fillViewport="true"
+    tools:context="louai.com.budgetmanagement.fragments.BudgetListFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+         <include layout="@layout/bugdet_list_header"/>
+
+        <android.support.v7.widget.RecyclerView
+        android:id="@+id/listeBudgets"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:background="#ffffff"
+        android:scrollbars="none">
+
+        </android.support.v7.widget.RecyclerView>
+        <include layout="@layout/budget_list_footer"/>
+
+
+
+    </LinearLayout>
+
+
+</ScrollView>

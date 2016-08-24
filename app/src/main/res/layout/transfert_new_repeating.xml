@@ -1,0 +1,461 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:id="@id/scroll" android:scrollbars="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@id/addExpense"
+        android:padding="5.0dip"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textSize="14.0dip"
+                android:textStyle="normal"
+                android:gravity="left"
+                android:id="@+id/expenseDescription"
+                android:paddingRight="5.0dip"
+                android:layout_width="115.0dip"
+                android:layout_height="wrap_content"
+                 android:text="Descrition" />
+            <EditText
+                android:id="@+id/expenseDescriptionRepeat"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" />
+
+            <RelativeLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <TextView android:textSize="14.0dip"
+                    android:textStyle="normal"
+                    android:gravity="left"
+                    android:id="@+id/numberOfPaymentLabel"
+                    android:paddingRight="5.0dip"
+                    android:layout_width="115.0dip"
+                    android:layout_height="fill_parent"
+                    android:text="Répétitions"
+                    android:layout_centerVertical="true" />
+                <Button
+                    android:textSize="24.0dip"
+                    android:textStyle="bold"
+                    android:textColor="@color/accent"
+                    android:id="@+id/NumberOfPaymentNote"
+                    android:layout_width="55.0dip"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:layout_alignParentRight="true" />
+                <EditText
+                    android:id="@+id/numberOfPayment"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:digits="\ 0123456789"
+                    android:layout_toLeftOf="@id/NumberOfPaymentNote"
+                    android:layout_toRightOf="@id/numberOfPaymentLabel"
+                    android:inputType="numberDecimal" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textSize="14.0dip"
+                android:textStyle="normal"
+                android:gravity="left"
+                android:id="@+id/expenseAmount"
+                android:paddingRight="5.0dip"
+                android:layout_width="115.0dip"
+                android:layout_height="wrap_content"
+                android:text="Montant"
+                android:layout_centerVertical="true" />
+
+            <ImageButton
+                android:id="@id/editAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/calculator"
+                android:layout_alignParentRight="true" />
+            <EditText
+                android:id="@+id/expenseAmountRepeat"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:digits="0123456789."
+                android:layout_toLeftOf="@id/editAmount"
+                android:layout_toRightOf="@id/expenseAmount"
+                android:inputType="numberDecimal" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:orientation="horizontal"
+            android:id="@+id/expenseTaxLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:textSize="14.0dip"
+                android:textStyle="normal"
+                android:gravity="left"
+                android:id="@+id/expenseTax"
+                android:paddingRight="5.0dip"
+                android:layout_width="115.0dip"
+                android:layout_height="wrap_content"
+                android:text="Tax:"
+                android:layout_centerVertical="true" />
+            <ImageButton
+                android:id="@+id/editTax"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/calculator"
+                android:layout_alignParentRight="true" />
+            <EditText
+                android:id="@+id/expenseTaxRepeat"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:digits="0123456789."
+                android:layout_toLeftOf="@id/editTax"
+                android:layout_toRightOf="@id/expenseTax"
+                android:inputType="numberDecimal" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:id="@+id/processFutureLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <CheckBox
+                android:textSize="14.0dip"
+                android:textStyle="normal"
+                android:layout_gravity="center_vertical"
+                android:id="@+id/processFutureTransaction"
+                android:paddingRight="5.0dip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Transactions future visible" />
+            <Button
+                android:textSize="24.0dip"
+                android:textStyle="bold"
+                android:textColor="@color/accent"
+                android:id="@+id/futureTransactionNote"
+                android:layout_width="50.0dip"
+                android:layout_height="wrap_content"
+                android:layout_margin="5.0dip"
+                android:text=""
+                android:singleLine="true" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textSize="14.0dip"
+                android:textStyle="normal"
+                android:gravity="left"
+                android:paddingRight="5.0dip"
+                android:layout_width="115.0dip"
+                android:layout_height="wrap_content"
+                android:text="Fréquence" />
+            <Spinner
+                android:id="@+id/frequencySpinnerRepeat"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:drawSelectorOnTop="true"
+                android:prompt="@string/frequencyChoose" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textSize="14.0dip"
+                android:textStyle="normal"
+                android:id="@+id/dateLabel"
+                android:layout_width="115.0dip"
+                android:layout_height="wrap_content"
+                android:text="Commence le"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true" />
+            <ImageButton
+                android:id="@+id/datePickerButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/today_32"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true" />
+            <TextView
+                android:textSize="16.0dip"
+                android:textStyle="bold"
+                android:textColor="@color/red"
+                android:id="@+id/datePickerRepeat"
+                android:padding="5.0dip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/dateLabel"
+                android:layout_centerVertical="true" />	/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:id="@+id/transferPayerLayout"
+            android:visibility="gone"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textSize="14.0dip"
+                android:textStyle="normal"
+                android:id="@+id/transferPayerLabel"
+                android:layout_width="115.0dip"
+                android:layout_height="wrap_content"
+                android:text="De"
+                android:layout_centerVertical="true" />
+            <ImageButton
+                android:id="@+id/editTransferPayer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/arrow_next_32"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true" />
+            <TextView
+                android:textSize="16.0dip"
+                android:textStyle="bold"
+                android:textColor="@color/red"
+                android:id="@+id/transferPayerRepeat"
+                android:padding="5.0dip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@id/editTransferPayer"
+                android:layout_toRightOf="@id/transferPayerLabel"
+                android:layout_centerVertical="true" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textSize="14.0dip"
+                android:textStyle="normal"
+                android:id="@+id/payeeLabel"
+                android:layout_width="115.0dip"
+                android:layout_height="wrap_content"
+                android:text="Bénéficiaire"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true" />
+            <ImageButton
+                android:id="@+id/editPayee"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/payee_32"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true" />
+            <TextView
+                android:textSize="16.0dip"
+                android:textStyle="bold"
+                android:textColor="@color/red"
+                android:id="@+id/payeeRepeat"
+                android:padding="5.0dip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@id/editPayee"
+                android:layout_toRightOf="@id/payeeLabel"
+                android:layout_centerVertical="true" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textSize="14.0dip"
+                android:textStyle="normal"
+                android:id="@+id/categoryLabel"
+                android:layout_width="115.0dip"
+                android:layout_height="wrap_content"
+                android:text="Catégorie"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true" />
+            <ImageButton
+                android:id="@+id/editCategory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/category_32"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true" />
+            <TextView
+                android:textSize="16.0dip"
+                android:textStyle="bold"
+                android:textColor="@color/red"
+                android:id="@+id/categoryRepeat"
+                android:padding="5.0dip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Non classé"
+                android:layout_toLeftOf="@id/editCategory"
+                android:layout_toRightOf="@id/categoryLabel"
+                android:layout_centerVertical="true" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textSize="14.0dip"
+                android:textStyle="normal"
+                android:id="@id/paymentMethod"
+                android:layout_width="115.0dip"
+                android:layout_height="wrap_content"
+                android:text="Mode de paiement"
+                android:layout_centerVertical="true" />
+            <ImageButton
+                android:id="@id/editPaymentMethod"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/credit_card_32"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true" />
+            <TextView
+                android:textSize="16.0dip"
+                android:textStyle="bold"
+                android:textColor="@color/red"
+                android:id="@+id/paymentMethodRepeat"
+                android:padding="5.0dip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@id/editPaymentMethod"
+                android:layout_toRightOf="@id/paymentMethod"
+                android:layout_centerVertical="true" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textSize="14.0dip"
+                android:textStyle="normal"
+                android:id="@+id/statusLabel"
+                android:layout_width="115.0dip"
+                android:layout_height="wrap_content"
+                android:text="Statut"
+                android:layout_centerVertical="true" />
+            <ImageButton
+                android:id="@+id/editStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/check_32"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true" />
+            <TextView
+                android:textSize="16.0dip"
+                android:textStyle="bold"
+                android:textColor="@color/red"
+                android:id="@+id/statusRepeat"
+                android:padding="5.0dip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@id/editStatus"
+                android:layout_toRightOf="@id/statusLabel"
+                android:layout_centerVertical="true" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingTop="5.0dip"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textSize="14.0dip"
+                android:textStyle="normal"
+                android:gravity="left"
+                android:paddingRight="5.0dip"
+                android:layout_width="115.0dip"
+                android:layout_height="wrap_content"
+                android:text="Rappel" />
+            <Spinner
+                android:id="@id/reminderDateSpinner"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:drawSelectorOnTop="true"
+                android:prompt="@string/frequencyChoose" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingTop="10.0dip"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textSize="14.0dip"
+                android:textStyle="normal"
+                android:gravity="left"
+                android:paddingRight="5.0dip"
+                android:layout_width="115.0dip"
+                android:layout_height="wrap_content"
+                android:text="Heure" />
+            <Spinner
+                android:id="@+id/reminderTimeSpinner"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:drawSelectorOnTop="true"
+                android:prompt="@string/frequencyChoose" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            android:paddingTop="5.0dip"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <Button
+                android:layout_gravity="center"
+                android:id="@+id/expenseDelete"
+                android:visibility="gone"
+                android:layout_width="100.0dip"
+                android:layout_height="wrap_content"
+                android:layout_margin="2.0dip"
+                android:minWidth="1.0dip"
+                android:minHeight="1.0dip"
+                android:text="Effacer"
+                android:layout_weight="1.0"
+                style="?android:attr/buttonStyleSmall" />
+            <Button
+                android:layout_gravity="center"
+                android:id="@+id/expenseBack"
+                android:layout_width="100.0dip"
+                android:layout_height="wrap_content"
+                android:layout_margin="2.0dip"
+                android:minWidth="1.0dip"
+                android:minHeight="1.0dip"
+                android:text="Retour"
+                android:layout_weight="1.0"
+                style="?android:attr/buttonStyleSmall" />
+            <Button
+                android:layout_gravity="center"
+                android:id="@+id/expenseSave"
+                android:layout_width="100.0dip"
+                android:layout_height="wrap_content"
+                android:layout_margin="2.0dip"
+                android:minWidth="1.0dip"
+                android:minHeight="1.0dip"
+                android:text="Ok"
+                android:layout_weight="1.0"
+                style="?android:attr/buttonStyleSmall" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

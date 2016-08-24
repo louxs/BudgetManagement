@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="Payer une facture" />
+    <item android:title="Voir les transactions " />
+    <item android:title="Modifier" />
+    <item android:title="Effacer" />
+
+</menu>
